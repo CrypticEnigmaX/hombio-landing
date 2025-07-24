@@ -176,3 +176,18 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  color: var(--text-muted);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
