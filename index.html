@@ -26,8 +26,50 @@
 
   <!-- ✅ Styles -->
   <link rel="stylesheet" href="style.css" />
-</head>
 
+  <style>
+    /* ✅ Hero Section with Background Video */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Dark overlay for readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+  </style>
+</head>
 
 <body>
 <header>
@@ -41,12 +83,19 @@
 </header>
 
   <section class="hero">
-    <h2>Find Flatmates Who <span>Match Your Vibe</span></h2>
-    <p>
-      Hombio helps you discover people who share your lifestyle, values, and
-      habits — not just a room. Designed for students, professionals, and
-      anyone living away from home.
-    </p>
+    <video autoplay muted loop playsinline preload="none" class="hero-video">
+      <source src="hombio_website_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+      <h2>Find Flatmates Who <span>Match Your Vibe</span></h2>
+      <p>
+        Hombio helps you discover people who share your lifestyle, values, and
+        habits — not just a room. Designed for students, professionals, and
+        anyone living away from home.
+      </p>
+    </div>
   </section>
 
   <section class="tags card">
@@ -99,4 +148,5 @@
   </footer>
 </body>
 </html>
+
 
